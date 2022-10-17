@@ -1,0 +1,19 @@
+<p>listado works!</p>
+
+<ul>
+    <li *ngFor="let item of heroes; let i = index"> 
+       {{i}} - {{item}} 
+    </li>
+</ul>
+
+    <div *ngIf="heroeEraserTAG ; else noBorrado"> <!-- OJO con el else-->
+        <h3>Heroe Borrado: <small> {{heroeEraserTAG}} </small></h3>
+    </div>
+
+    <ng-template #noBorrado> <!-- OJO con el else el TAG esta aca #noBorrado-->
+        <h3>Heroe no Borrado </h3>
+    </ng-template>
+    
+
+
+<button (click)="borrarHeroe()">Borrar Heroe</button>
